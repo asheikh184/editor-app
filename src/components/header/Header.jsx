@@ -1,25 +1,8 @@
-import {
-  Button,
-  IconButton,
-  Img,
-  Menu,
-  MenuButton,
-  MenuItem,
-  MenuList,
-  Stack,
-  Text,
-} from '@chakra-ui/react';
+import { Button, IconButton, Img, Stack } from '@chakra-ui/react';
 import React from 'react';
 import logo from '../../assests/images/logo.png';
-import canvasbg from '../../assests/images/canvasbg.png';
 import { ImDownload2, ImUpload2 } from 'react-icons/im';
 import { BsCardImage } from 'react-icons/bs';
-import { BiText } from 'react-icons/bi';
-import { AiOutlineDoubleLeft, AiOutlineDoubleRight } from 'react-icons/ai';
-import { SiIconify } from 'react-icons/si';
-import { FaDrawPolygon, FaShapes } from 'react-icons/fa';
-import { VscCode } from 'react-icons/vsc';
-import { CgGhostCharacter } from 'react-icons/cg';
 
 const Header = () => {
   return (
