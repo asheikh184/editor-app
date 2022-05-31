@@ -1,8 +1,12 @@
 {
   "name": "editor-app",
-  "version": "0.1.0",
-  "private": true,
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/asheikh184/editor-app.git",
+  "author": "sohaib57 <sohaibbutt57@gmail.com>",
+  "license": "MIT",
   "dependencies": {
+    "yarn": "^1.22.18",
     "@chakra-ui/react": "^2.1.2",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.0.1",
