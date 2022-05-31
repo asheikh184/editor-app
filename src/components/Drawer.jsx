@@ -182,6 +182,9 @@ export default function MiniDrawer() {
         </List>
       </Drawer>
 
+      <Box>
+        <text>hey there</text>
+      </Box>
     </Box>
   );
 }
