@@ -1,5 +1,6 @@
 import { Button, IconButton, Img, Menu, MenuButton, MenuItem, MenuList, Stack, Tab, TabList, Tabs, Text } from '@chakra-ui/react'
 import React from 'react'
+import { makeStyles } from '@mui/material'
 import logo from '../../assests/images/logo.png'
 import canvasbg from '../../assests/images/canvasbg.png'
 import { ImDownload2, ImUpload2 } from 'react-icons/im'
@@ -10,6 +11,7 @@ import { SiIconify } from 'react-icons/si'
 import { FaDrawPolygon, FaShapes } from 'react-icons/fa'
 import { VscCode } from 'react-icons/vsc'
 import { CgGhostCharacter } from 'react-icons/cg'
+import PersistentDrawerRight from '../DesignerDrawer'
 
 const Header = () => {
 
@@ -161,57 +163,7 @@ const Header = () => {
                 <Stack flex={'3'} bgColor={'#F3F3F3'} bgImage={canvasbg} boxShadow={'inset 0px -5px 10px 2px rgba(0,0,0,0.75)'} h={'100vh'}><Text>Canvas</Text></Stack>
                 {/* Designer */}
                 <Stack pr={'2'} >
-                    <Menu placement='right' >
-                        <MenuButton bgColor={'#CD7077'}
-                            _hover={{ bgColor: '#205375', color: 'white' }}
-                            _active={{ bgColor: '#205375', color: 'white', border: 'none' }}
-                            _focus={{}}
-                            as={IconButton}
-                            aria-label='Options'
-                            icon={<AiOutlineDoubleLeft />}
-                            variant='outline'
-                        />
-                    </Menu>
-                    <Stack>
-                        <Tabs orientation='vertical' direction='ltr' variant={'unstyled'}>
-                            <TabList>
-                                <Tab
-                                    as={IconButton}
-                                    icon={<AiOutlineDoubleLeft />}
-                                    variant={'ghost'}
-                                    _hover={{ bgColor: '#205375', color: 'white' }}
-                                    _active={{ bgColor: '#205375', color: 'white', border: 'none' }}
-                                    _focus={{}}>
-                                </Tab>
-                                <Tab
-                                    as={IconButton}
-                                    icon={<AiOutlineDoubleLeft />}
-                                    variant={'ghost'}
-                                    _hover={{ bgColor: '#205375', color: 'white' }}
-                                    _active={{ bgColor: '#205375', color: 'white', border: 'none' }}
-                                    _focus={{}}>
-                                </Tab>
-                                <Tab
-                                    as={IconButton}
-                                    icon={<AiOutlineDoubleLeft />}
-                                    variant={'ghost'}
-                                    _hover={{ bgColor: '#205375', color: 'white' }}
-                                    _active={{ bgColor: '#205375', color: 'white', border: 'none' }}
-                                    _focus={{}}>
-                                </Tab>                            </TabList>
-                        </Tabs>
-                        {/* <TabPanels>
-                            <TabPanel>
-                                <p>one!</p>
-                            </TabPanel>
-                            <TabPanel>
-                                <p>two!</p>
-                            </TabPanel>
-                            <TabPanel>
-                                <p>three!</p>
-                            </TabPanel>
-                        </TabPanels> */}
-                    </Stack>
+                    <PersistentDrawerRight/>
                 </Stack>
             </Stack>
         </>
