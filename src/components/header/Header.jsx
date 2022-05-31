@@ -1,14 +1,8 @@
-import {
-  Button,
-  IconButton,
-  Img,
-  Stack,
-} from '@chakra-ui/react';
+import { Button, IconButton, Img, Stack } from '@chakra-ui/react';
 import React from 'react';
 import logo from '../../assests/images/logo.png';
 import { ImDownload2, ImUpload2 } from 'react-icons/im';
 import { BsCardImage } from 'react-icons/bs';
-
 
 const Header = () => {
   return (
