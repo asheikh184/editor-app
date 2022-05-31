@@ -1,12 +1,13 @@
-import React from 'react'
-import Header from '../components/header/Header'
+import React from 'react';
+import Drawer from '../components/header/Drawer';
 
 const Editor = () => {
-    return (
-        <>
-            <Header />
-        </>
-    )
-}
+  return (
+    <>
+      {/* <Header /> */}
+      <Drawer />
+    </>
+  );
+};
 
-export default Editor
+export default Editor;
