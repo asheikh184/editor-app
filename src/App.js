@@ -1,9 +1,6 @@
 import React from 'react';
 import { ChakraProvider, theme } from '@chakra-ui/react';
-import Editor from './screens/Editor';
-import { createTheme } from '@material-ui/core/styles'
-
-const muiTheme = createTheme()
+import Editor from './layout/Editor';
 
 function App() {
   return (
