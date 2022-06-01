@@ -1060,7 +1060,15 @@
     core-js-pure "^3.20.2"
     regenerator-runtime "^0.13.4"
 
+<<<<<<< HEAD
 "@babel/runtime@^7.0.0", "@babel/runtime@^7.10.1", "@babel/runtime@^7.10.2", "@babel/runtime@^7.10.4", "@babel/runtime@^7.11.1", "@babel/runtime@^7.11.2", "@babel/runtime@^7.12.13", "@babel/runtime@^7.12.5", "@babel/runtime@^7.13.10", "@babel/runtime@^7.16.3", "@babel/runtime@^7.18.0", "@babel/runtime@^7.18.3", "@babel/runtime@^7.3.1", "@babel/runtime@^7.4.4", "@babel/runtime@^7.5.5", "@babel/runtime@^7.7.2", "@babel/runtime@^7.8.3", "@babel/runtime@^7.8.4", "@babel/runtime@^7.8.7", "@babel/runtime@^7.9.2":
+=======
+<<<<<<< HEAD
+"@babel/runtime@^7.0.0", "@babel/runtime@^7.10.1", "@babel/runtime@^7.10.2", "@babel/runtime@^7.10.4", "@babel/runtime@^7.11.1", "@babel/runtime@^7.11.2", "@babel/runtime@^7.12.13", "@babel/runtime@^7.12.5", "@babel/runtime@^7.13.10", "@babel/runtime@^7.16.3", "@babel/runtime@^7.17.2", "@babel/runtime@^7.18.0", "@babel/runtime@^7.18.3", "@babel/runtime@^7.3.1", "@babel/runtime@^7.4.4", "@babel/runtime@^7.5.5", "@babel/runtime@^7.7.2", "@babel/runtime@^7.8.3", "@babel/runtime@^7.8.4", "@babel/runtime@^7.8.7", "@babel/runtime@^7.9.2":
+=======
+"@babel/runtime@^7.0.0", "@babel/runtime@^7.10.1", "@babel/runtime@^7.10.2", "@babel/runtime@^7.10.4", "@babel/runtime@^7.11.1", "@babel/runtime@^7.11.2", "@babel/runtime@^7.12.13", "@babel/runtime@^7.12.5", "@babel/runtime@^7.16.3", "@babel/runtime@^7.18.0", "@babel/runtime@^7.18.3", "@babel/runtime@^7.3.1", "@babel/runtime@^7.4.4", "@babel/runtime@^7.5.5", "@babel/runtime@^7.8.3", "@babel/runtime@^7.8.4", "@babel/runtime@^7.8.7", "@babel/runtime@^7.9.2":
+>>>>>>> f9cd2d66513d7120e65a90d08ae88b277d60a3ad
+>>>>>>> ec9243c370f7d6ee967bb34858fe6f861f229cfd
   version "7.18.3"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.18.3.tgz#c7b654b57f6f63cf7f8b418ac9ca04408c4579f4"
   integrity sha512-38Y8f7YUhce/K7RMwTp7m0uCumpv9hZkitCbBClqQIow1qSbCvGkcegKOXpEWCQLfWmevgRiWokZ1GkpfhbZug==
@@ -8303,9 +8311,15 @@ rc-collapse@~3.1.0:
     shallowequal "^1.1.0"
 
 rc-dialog@~8.8.0, rc-dialog@~8.8.1:
+<<<<<<< HEAD
+  version "8.8.1"
+  resolved "https://registry.yarnpkg.com/rc-dialog/-/rc-dialog-8.8.1.tgz#cd8897fbee1de0eab6d237a6abe1e4db8d09dd72"
+  integrity sha512-7M1WKZCjfIABKEaJVskdYvb80z+RX7I11PeSjPVfLOOaJAmIepvDEd0alBtOZvOL3fZFWlMs4JVZtp9LZgONxA==
+=======
   version "8.8.2"
   resolved "https://registry.yarnpkg.com/rc-dialog/-/rc-dialog-8.8.2.tgz#2212c63b940cf0ca46f961803f83007966cc6582"
   integrity sha512-n1waqBDDKqCCcPCDGycahfawF00WqgtXTXUwxrLStUpfQAo7nzkAvTq9voT78X2qN83UYvrMg1TWCuTueBp+sg==
+>>>>>>> f9cd2d66513d7120e65a90d08ae88b277d60a3ad
   dependencies:
     "@babel/runtime" "^7.10.1"
     classnames "^2.2.6"

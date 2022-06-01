@@ -1,16 +1,8 @@
-import React from 'react'
-import Canvasbody from './Body/Canvasbody'
-import Designer from './Body/Designer'
-import LayersAndAssets from './Body/LayerAndAssets'
+import React from 'react';
+import LayerAndAssets from './Body/LayerAndAssets';
 
 const CanvasBody = () => {
-  return (
-    <>
-      <LayersAndAssets />
-      {/* <Canvasbody /> */}
-      <Designer />
-    </>
-  )
-}
+  return <LayerAndAssets />;
+};
 
-export default CanvasBody
+export default CanvasBody;
