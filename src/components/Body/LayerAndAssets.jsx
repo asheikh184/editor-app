@@ -43,6 +43,12 @@ const LayerAndAssets = () => {
       }}
     >
       <Sider
+        style={{
+          overflow: 'none',
+          height: '100vh',
+          right: 0,
+          position: 'fixed'
+        }}
         collapsible
         collapsed={collapsed}
         onCollapse={value => setCollapsed(value)}
