@@ -37,17 +37,15 @@ const items = [
 const LayerAndAssets = () => {
   const [collapsed, setCollapsed] = useState(false);
   return (
-    <Layout
-      style={{
-        minHeight: '100vh',
-      }}
-    >
+    <Layout  style={{
+      marginTop: '-0.5px'
+    }}>
       <Sider
         style={{
           overflow: 'none',
           height: '100vh',
           right: 0,
-          position: 'fixed'
+          position: 'fixed',
         }}
         collapsible
         collapsed={collapsed}
