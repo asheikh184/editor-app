@@ -8,7 +8,8 @@ import {
   TeamOutlined,
   UserOutlined,
 } from '@ant-design/icons';
-const { Sider } = Layout;
+import Canvasbody from './Canvasbody';
+const { Sider, Header, Content, Footer } = Layout;
 
 function getItem(label, key, icon, children) {
   return {
@@ -35,24 +36,51 @@ const items = [
 ];
 
 const LayerAndAssets = () => {
-  const [collapsed, setCollapsed] = useState(false);
+  const [leftCollapse, setleftCollapse] = useState(false);
+  const [rightCollapse, setRightCollapse] = useState(false);
+
   return (
-    <Layout  style={{
-      marginTop: '-0.5px'
-    }}>
+    <Layout
+      style={{
+        marginTop: '-0.5px',
+      }}
+    >
+      <Sider
+        style={{
+          overflow: 'none',
+          height: '100vh',
+          left: 0,
+          position: 'relative',
+        }}
+        collapsible
+        collapsed={leftCollapse}
+        onCollapse={value => setleftCollapse(value)}
+      >
+        <div className="logo" />
+        <Menu
+          theme="dark"
+          defaultSelectedKeys={['1']}
+          mode="inline"
+          items={items}
+        />
+      </Sider>
+      <Layout className="site-layout">
+        <Canvasbody />
+      </Layout>
       <Sider
         style={{
           overflow: 'none',
           height: '100vh',
           right: 0,
-          position: 'fixed',
+          position: 'relative',
         }}
         collapsible
-        collapsed={collapsed}
-        onCollapse={value => setCollapsed(value)}
+        collapsed={rightCollapse}
+        onCollapse={value => setRightCollapse(value)}
       >
         <div className="logo" />
         <Menu
+        className='ASADYOYE'
           theme="dark"
           defaultSelectedKeys={['1']}
           mode="inline"

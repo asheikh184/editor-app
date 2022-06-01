@@ -8,7 +8,8 @@ const Header = () => {
   return (
     <>
       {/* Header */}
-      <Stack
+      <Stack 
+      className='Header-Stack'
         minH={'16'}
         bgColor={'#0E2634'}
         align={'center'}
@@ -17,7 +18,7 @@ const Header = () => {
         justify={'end'}
       >
         <Img src={logo} position={'absolute'} left={'1'} boxSize={'36'} />
-        <Stack direction={'row'}>
+        <Stack direction={'row'} className='Header-Buttons-Stack'>
           <Button
             bgColor={'#CD6F71'}
             color={'white'}
@@ -35,7 +36,7 @@ const Header = () => {
         </Stack>
       </Stack>
       {/* Save and upload file  */}
-      <Stack
+      <Stack className='Save-and-upload-Stack'
         margin={'0px !important'}
         color={'black'}
         bgColor={'#205375'}
