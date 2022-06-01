@@ -1,5 +1,6 @@
 import {
   Button,
+  Drawer,
   IconButton,
   Menu,
   MenuButton,
@@ -16,12 +17,20 @@ import { SiIconify } from 'react-icons/si';
 import { FaDrawPolygon, FaRegWindowRestore, FaShapes } from 'react-icons/fa';
 import { VscCode } from 'react-icons/vsc';
 import { CgGhostCharacter } from 'react-icons/cg';
+import MiniDrawer from './Drawer';
 
 const CanvasBody = () => {
   return (
-    <Stack margin={'0px !important'} direction={'row'} height={'full'} overflow={'auto'}>
+    <Stack
+      margin={'0px !important'}
+      direction={'row'}
+      height={'full'}
+      overflow={'auto'}
+    >
       {/* Layers and Assest */}
-      <Stack justify={'center'} pl={'2'}>
+
+      <MiniDrawer />
+      {/* <Stack justify={'center'} pl={'2'}>
         <Menu placement="right">
           <MenuButton
             bgColor={'#CD7077'}
@@ -156,7 +165,7 @@ const CanvasBody = () => {
             <MenuItem icon={<BiText size={'2em'} />}>Add Text</MenuItem>
           </MenuList>
         </Menu>
-      </Stack>
+      </Stack> */}
       {/* Canvas */}
       <Stack
         flex={'3'}
