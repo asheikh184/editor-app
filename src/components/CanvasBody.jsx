@@ -7,7 +7,7 @@ const CanvasBody = () => {
   return (
     <>
       <LayersAndAssets />
-      <Canvasbody />
+      {/* <Canvasbody /> */}
       <Designer />
     </>
   )
