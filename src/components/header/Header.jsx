@@ -8,35 +8,36 @@ const Header = () => {
   return (
     <>
       {/* Header */}
-      <Stack 
-      className='Header-Stack'
+      <Stack
+        className="Header-Stack"
         minH={'16'}
-        bgColor={'#0E2634'}
+        bgColor={'#001529'}
         align={'center'}
         px={'3'}
         direction={'row'}
         justify={'end'}
       >
         <Img src={logo} position={'absolute'} left={'1'} boxSize={'36'} />
-        <Stack direction={'row'} className='Header-Buttons-Stack'>
+        <Stack direction={'row'} className="Header-Buttons-Stack">
           <Button
-            bgColor={'#CD6F71'}
+            bgColor={'#1890ff'}
             color={'white'}
-            _hover={{ bgColor: '#91979E', color: '#CD6F71' }}
+            _hover={{ bgColor: '', color: 'white' }}
           >
             Image Mapping
           </Button>
           <Button
-            bgColor={'#CD6F71'}
+            bgColor={'#1890ff'}
             color={'white'}
-            _hover={{ bgColor: '#91979E', color: '#CD6F71' }}
+            _hover={{ bgColor: '', color: 'white' }}
           >
             Work flow
           </Button>
         </Stack>
       </Stack>
       {/* Save and upload file  */}
-      <Stack className='Save-and-upload-Stack'
+      <Stack
+        className="Save-and-upload-Stack"
         margin={'0px !important'}
         color={'black'}
         bgColor={'#205375'}
@@ -45,21 +46,21 @@ const Header = () => {
         pr={'2'}
       >
         <IconButton
-          _hover={{ color: '#cd6f71' }}
+          _hover={{ color: 'white' }}
           _focus={{}}
           _active={{}}
           variant={'ghost'}
           icon={<ImDownload2 />}
         />
         <IconButton
-          _hover={{ color: '#cd6f71' }}
+          _hover={{ color: 'white' }}
           _focus={{}}
           _active={{}}
           variant={'ghost'}
           icon={<ImUpload2 />}
         />
         <IconButton
-          _hover={{ color: '#cd6f71' }}
+          _hover={{ color: 'white' }}
           _focus={{}}
           _active={{}}
           variant={'ghost'}

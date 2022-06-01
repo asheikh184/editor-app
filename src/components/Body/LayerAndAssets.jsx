@@ -39,56 +39,54 @@ const LayerAndAssets = () => {
   const [leftCollapse, setleftCollapse] = useState(false);
   const [rightCollapse, setRightCollapse] = useState(false);
 
-  return (
-    <Layout
-      style={{
-        marginTop: '-0.5px',
-      }}
-    >
-      <Sider
-        style={{
-          overflow: 'none',
-          height: '100vh',
-          left: 0,
-          position: 'relative',
-        }}
-        collapsible
-        collapsed={leftCollapse}
-        onCollapse={value => setleftCollapse(value)}
-      >
-        <div className="logo" />
-        <Menu
-          theme="dark"
-          defaultSelectedKeys={['1']}
-          mode="inline"
-          items={items}
-        />
-      </Sider>
-      <Layout className="site-layout">
-        <Canvasbody />
-      </Layout>
-      <Sider
-        style={{
-          overflow: 'none',
-          height: '100vh',
-          right: 0,
-          position: 'relative',
-        }}
-        collapsible
-        collapsed={rightCollapse}
-        onCollapse={value => setRightCollapse(value)}
-      >
-        <div className="logo" />
-        <Menu
-        className='ASADYOYE'
-          theme="dark"
-          defaultSelectedKeys={['1']}
-          mode="inline"
-          items={items}
-        />
-      </Sider>
-    </Layout>
-  );
+    return (
+        <Layout style={{
+            marginTop: '-0.5px'
+        }}>
+            <Sider
+                style={{
+                    overflow: 'none',
+                    height: '100vh',
+                    left: 0,
+                    position: 'relative',
+                }}
+                collapsible
+                collapsed={leftCollapse}
+                onCollapse={value => setleftCollapse(value)}
+            >
+                <div className="logo" />
+                <Menu
+                    theme="dark"
+                    defaultSelectedKeys={['1']}
+                    mode="inline"
+                    items={items}
+                />
+            </Sider>
+            <Layout className="site-layout">
+                <Canvasbody/>
+            </Layout>
+            <Sider
+                style={{
+                    overflow: 'none',
+                    height: '100vh',
+                    right: 0,
+                    position: 'relative',
+                }}
+                collapsible
+                collapsed={rightCollapse}
+                onCollapse={value => setRightCollapse(value)}
+            >
+                <div className="logo" />
+                <Menu
+                className='Sohaib'
+                    theme="dark"
+                    defaultSelectedKeys={['1']}
+                    mode="inline"
+                    items={items}
+                />
+            </Sider>
+        </Layout>
+    );
 };
 
 export default LayerAndAssets;
