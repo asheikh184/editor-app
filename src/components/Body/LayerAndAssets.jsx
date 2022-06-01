@@ -78,6 +78,7 @@ const LayerAndAssets = () => {
             >
                 <div className="logo" />
                 <Menu
+                className='Sohaib'
                     theme="dark"
                     defaultSelectedKeys={['1']}
                     mode="inline"

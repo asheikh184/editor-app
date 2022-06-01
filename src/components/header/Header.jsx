@@ -22,14 +22,14 @@ const Header = () => {
           <Button
             bgColor={'#CD6F71'}
             color={'white'}
-            _hover={{ bgColor: '#91979E', color: '#CD6F71' }}
+            _hover={{ bgColor: '#1890ff', color: 'white' }}
           >
             Image Mapping
           </Button>
           <Button
             bgColor={'#CD6F71'}
             color={'white'}
-            _hover={{ bgColor: '#91979E', color: '#CD6F71' }}
+            _hover={{ bgColor: '#1890ff', color: 'white' }}
           >
             Work flow
           </Button>
@@ -45,21 +45,21 @@ const Header = () => {
         pr={'2'}
       >
         <IconButton
-          _hover={{ color: '#cd6f71' }}
+          _hover={{ color: 'white' }}
           _focus={{}}
           _active={{}}
           variant={'ghost'}
           icon={<ImDownload2 />}
         />
         <IconButton
-          _hover={{ color: '#cd6f71' }}
+          _hover={{ color: 'white' }}
           _focus={{}}
           _active={{}}
           variant={'ghost'}
           icon={<ImUpload2 />}
         />
         <IconButton
-          _hover={{ color: '#cd6f71' }}
+          _hover={{ color: 'white' }}
           _focus={{}}
           _active={{}}
           variant={'ghost'}
