@@ -1,13 +1,6 @@
-import React, { useState , useRef } from 'react';
+import React, { useState, useRef } from 'react';
 import 'antd/dist/antd.css';
-import { Layout, Menu, Breadcrumb } from 'antd';
-import {
-  DesktopOutlined,
-  PieChartOutlined,
-  FileOutlined,
-  TeamOutlined,
-  UserOutlined,
-} from '@ant-design/icons';
+import { Layout, Menu } from 'antd';
 import Canvasbody from './Canvasbody';
 import {
   SiIconify,
@@ -20,7 +13,7 @@ import {
   CgGhostCharacter,
 } from 'react-icons/all';
 
-const { Sider, Header, Content, Footer } = Layout;
+const { Sider } = Layout;
 
 function getItem(label, key, icon, children) {
   return {
@@ -33,7 +26,6 @@ function getItem(label, key, icon, children) {
 
 const items = [
   getItem('Stickers', 'sub1', <SiIconify />, [getItem('Markers', '1')]),
-  // getItem('Option 2', '2', <DesktopOutlined />),
   getItem('Text', 'sub2', <BiText />, [getItem('Input Field', '2')]),
   getItem('Image', 'sub3', <BsCardImage />, [
     getItem('Images', '3'),
@@ -56,14 +48,13 @@ const items = [
     getItem('Code', '14'),
     getItem('iframe', '15'),
   ]),
-  getItem('Video', '1', <GrYoutube />),
-  getItem('SVG', '2', <CgGhostCharacter />),
+  getItem('Video', '16', <GrYoutube />),
+  getItem('SVG', '17', <CgGhostCharacter />),
 ];
 
 const LayerAndAssets = () => {
   const [leftCollapse, setleftCollapse] = useState(false);
   const [rightCollapse, setRightCollapse] = useState(false);
-
 
   return (
     <Layout
@@ -73,8 +64,7 @@ const LayerAndAssets = () => {
     >
       <Sider
         style={{
-          overflow: 'none',
-          height: '100vh',
+          overflowY: 'auto',
           left: 0,
           position: 'relative',
         }}
@@ -85,13 +75,17 @@ const LayerAndAssets = () => {
         <div className="logo" />
         <Menu theme="dark" mode="inline" items={items} />
       </Sider>
-      <Layout className="site-layout">
+      <Layout
+        style={{
+          overflow: 'auto',
+        }}
+        className="site-layout"
+      >
         <Canvasbody />
       </Layout>
       <Sider
         style={{
-          overflow: 'none',
-          height: '100vh',
+          overflowY: 'auto',
           right: 0,
           position: 'relative',
         }}
