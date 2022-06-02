@@ -1,17 +1,10 @@
 import React, { useState } from 'react';
 import 'antd/dist/antd.css';
-import { Layout, Menu, Breadcrumb } from 'antd';
-import {
-    DesktopOutlined,
-    PieChartOutlined,
-    FileOutlined,
-    TeamOutlined,
-    UserOutlined,
-} from '@ant-design/icons';
+import { Layout, Menu } from 'antd';
 import Canvasbody from './Canvasbody';
 import { SiIconify, BiText, BsCardImage, FaShapes, FaDrawPolygon, BsCodeSlash, GrYoutube, CgGhostCharacter } from 'react-icons/all'
 
-const { Sider, Header, Content, Footer } = Layout;
+const { Sider } = Layout;
 
 function getItem(label, key, icon, children) {
     return {
@@ -27,7 +20,6 @@ const items = [
         getItem('Markers', '1')
     ]
     ),
-    // getItem('Option 2', '2', <DesktopOutlined />),
     getItem('Text', 'sub2', <BiText />, [
         getItem('Input Field', '2'),
     ]),
@@ -54,8 +46,8 @@ const items = [
         getItem('Code', '14'),
         getItem('iframe', '15'),
     ]),
-    getItem('Video', '1', <GrYoutube />),
-    getItem('SVG', '2', <CgGhostCharacter />)
+    getItem('Video', '16', <GrYoutube />),
+    getItem('SVG', '17', <CgGhostCharacter />)
 
 ];
 
@@ -69,8 +61,7 @@ const LayerAndAssets = () => {
         }}>
             <Sider
                 style={{
-                    overflow: 'none',
-                    height: '100vh',
+                    overflowY: 'auto',
                     left: 0,
                     position: 'relative',
                 }}
@@ -81,7 +72,6 @@ const LayerAndAssets = () => {
                 <div className="logo" />
                 <Menu
                     theme="dark"
-
                     mode="inline"
                     items={items}
                 />
@@ -91,8 +81,7 @@ const LayerAndAssets = () => {
             </Layout>
             <Sider
                 style={{
-                    overflow: 'none',
-                    height: '100vh',
+                    overflowY: 'auto',
                     right: 0,
                     position: 'relative',
                 }}
