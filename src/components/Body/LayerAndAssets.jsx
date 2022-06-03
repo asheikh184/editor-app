@@ -53,8 +53,8 @@ const items = [
 ];
 
 const LayerAndAssets = () => {
-  const [leftCollapse, setleftCollapse] = useState(false);
-  const [rightCollapse, setRightCollapse] = useState(false);
+  const [leftCollapse, setleftCollapse] = useState(true);
+  const [rightCollapse, setRightCollapse] = useState(true);
 
   return (
     <Layout
@@ -107,3 +107,6 @@ const LayerAndAssets = () => {
 };
 
 export default LayerAndAssets;
+
+
+

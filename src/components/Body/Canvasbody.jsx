@@ -1,78 +1,93 @@
-import { useEffect, useState } from 'react';
+import React, { useEffect, useLayoutEffect, useState } from 'react';
 import { fabric } from 'fabric';
 
 const Canvasbody = () => {
-  // useEffect(() => {
-  //   return () => fabricFunc();
-  // }, []);
+  const [canvas1, setCanvas] = useState();
+  // , { selection: false }
+  // var rect, isDown, origX, origY;
 
-  const fabricFunc = () => {
-    const canvas = new fabric.Canvas('canvas-main');
-    console.log('fabricfunction');
+  // canvas.on('mouse:down', function(o){
+  //     isDown = true;
+  //     var pointer = canvas.getPointer(o.e);
+  //     origX = pointer.x;
+  //     origY = pointer.y;
+  //     var pointer = canvas.getPointer(o.e);
+  //     rect = new fabric.Rect({
+  //         left: origX,
+  //         top: origY,
+  //         originX: 'left',
+  //         originY: 'top',
+  //         width: pointer.x-origX,
+  //         height: pointer.y-origY,
+  //         angle: 0,
+  //         fill: 'rgba(255,0,0,0.5)',
+  //         transparentCorners: false
+  //     });
+  //     canvas.add(rect);
+  // });
 
-    // , { selection: false }
-    // var rect, isDown, origX, origY;
+  // canvas.on('mouse:move', function(o){
+  //     if (!isDown) return;
+  //     var pointer = canvas.getPointer(o.e);
 
-    // canvas.on('mouse:down', function(o){
-    //     isDown = true;
-    //     var pointer = canvas.getPointer(o.e);
-    //     origX = pointer.x;
-    //     origY = pointer.y;
-    //     var pointer = canvas.getPointer(o.e);
-    //     rect = new fabric.Rect({
-    //         left: origX,
-    //         top: origY,
-    //         originX: 'left',
-    //         originY: 'top',
-    //         width: pointer.x-origX,
-    //         height: pointer.y-origY,
-    //         angle: 0,
-    //         fill: 'rgba(255,0,0,0.5)',
-    //         transparentCorners: false
-    //     });
-    //     canvas.add(rect);
-    // });
+  //     if(origX>pointer.x){
+  //         rect.set({ left: Math.abs(pointer.x) });
+  //     }
+  //     if(origY>pointer.y){
+  //         rect.set({ top: Math.abs(pointer.y) });
+  //     }
 
-    // canvas.on('mouse:move', function(o){
-    //     if (!isDown) return;
-    //     var pointer = canvas.getPointer(o.e);
+  //     rect.set({ width: Math.abs(origX - pointer.x) });
+  //     rect.set({ height: Math.abs(origY - pointer.y) });
 
-    //     if(origX>pointer.x){
-    //         rect.set({ left: Math.abs(pointer.x) });
-    //     }
-    //     if(origY>pointer.y){
-    //         rect.set({ top: Math.abs(pointer.y) });
-    //     }
+  //     canvas.renderAll();
+  // });
 
-    //     rect.set({ width: Math.abs(origX - pointer.x) });
-    //     rect.set({ height: Math.abs(origY - pointer.y) });
+  // canvas.on('mouse:up', function(o){
+  //   isDown = false;
+  // });
+  useLayoutEffect(() => {
+    return () => {
+      setCanvas(new fabric.Canvas('canvas-main'));
+    };
+  }, []);
 
-    //     canvas.renderAll();
-    // });
-
-    // canvas.on('mouse:up', function(o){
-    //   isDown = false;
-    // });
-
-    const rect = new fabric.Rect({
-      height: 280,
-      width: 200,
-      stroke: 'black',
-    });
-
-    canvas.add(rect);
-
-    rect.animate('left', '+=400', {
-      onChange: canvas.renderAll.bind(canvas),
-    });
-
-    const circ = new fabric.Circle({
-      radius: 100,
+  function addRectangle() {
+    var rect = new fabric.Rect({
+      top: 80,
+      left: 300,
       fill: 'red',
+      width: 100,
+      height: 100,
     });
+    canvas1.add(rect);
+    canvas1.requestRenderAll();
+  }
 
-    canvas.add(circ);
+  function addCircle() {
+    var circ = new fabric.Circle({
+      left: 50,
+      top: 50,
+      fill: 'yellow',
+      radius: 60,
+    });
+    canvas1.add(circ);
+    canvas1.requestRenderAll();
+  }
 
+  function addCircle() {
+    const canvas = new fabric.Canvas('canvas-main');
+    var circ = new fabric.Circle({
+      left: 200,
+      top: 200,
+      fill: 'yellow',
+      radius: 20,
+    });
+    canvas1.add(circ);
+    canvas1.requestRenderAll();
+  }
+
+  function addTextBox() {
     const textbox = new fabric.Textbox('Click on the Rectangle to move it.', {
       fontSize: 20,
       left: 50,
@@ -81,31 +96,31 @@ const Canvasbody = () => {
       fill: 'black',
       color: 'white',
     });
-    canvas.add(textbox);
-
-    canvas.add(
-      new fabric.IText('Tap and Type', {
-        fontFamily: 'arial black',
-        left: 100,
-        top: 100,
-      })
-    );
-
-    var path = new fabric.Path('M 0 0 L 200 100 L 170 200 z');
-    path.set({ fill: 'red', stroke: 'green', opacity: 0.5 });
-    canvas.add(path);
-  };
+    canvas1.add(textbox);
+    canvas1.requestRenderAll();
+  }
 
   return (
     <>
       <canvas
         style={{ border: 'solid 1px #555' }}
         id="canvas-main"
-        width="600px"
-        height="600px"
+        width="1300px"
+        height="400px"
       />
 
-      <button onClick={fabricFunc}>Click me</button>
+      <br />
+      <br />
+      <button type="button" onClick={addRectangle}>
+        Rectangle
+      </button>
+      <br />
+      <button type="button" onClick={addCircle}>
+        Circle
+      </button>
+      <button type="button" onClick={addTextBox}>
+        TextBox
+      </button>
     </>
   );
 };
