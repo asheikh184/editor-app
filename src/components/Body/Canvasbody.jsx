@@ -3,6 +3,8 @@ import { fabric } from 'fabric';
 
 const Canvasbody = () => {
   const [canvas1, setCanvas] = useState();
+
+
   // , { selection: false }
   // var rect, isDown, origX, origY;
 
@@ -39,7 +41,7 @@ const Canvasbody = () => {
 
   //     rect.set({ width: Math.abs(origX - pointer.x) });
   //     rect.set({ height: Math.abs(origY - pointer.y) });
-
+  
   //     canvas.renderAll();
   // });
 
@@ -51,6 +53,8 @@ const Canvasbody = () => {
       setCanvas(new fabric.Canvas('canvas-main'));
     };
   }, []);
+ 
+
 
   function addRectangle() {
     var rect = new fabric.Rect({
@@ -64,24 +68,13 @@ const Canvasbody = () => {
     canvas1.requestRenderAll();
   }
 
+
   function addCircle() {
     var circ = new fabric.Circle({
       left: 50,
       top: 50,
       fill: 'yellow',
       radius: 60,
-    });
-    canvas1.add(circ);
-    canvas1.requestRenderAll();
-  }
-
-  function addCircle() {
-    const canvas = new fabric.Canvas('canvas-main');
-    var circ = new fabric.Circle({
-      left: 200,
-      top: 200,
-      fill: 'yellow',
-      radius: 20,
     });
     canvas1.add(circ);
     canvas1.requestRenderAll();
@@ -99,7 +92,6 @@ const Canvasbody = () => {
     canvas1.add(textbox);
     canvas1.requestRenderAll();
   }
-
 
   return (
     <>

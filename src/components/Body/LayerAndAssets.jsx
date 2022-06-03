@@ -94,13 +94,7 @@ const LayerAndAssets = () => {
         onCollapse={value => setRightCollapse(value)}
       >
         <div className="logo" />
-        <Menu
-          className="Sohaib"
-          theme="dark"
-          defaultSelectedKeys={['1']}
-          mode="inline"
-          items={items}
-        />
+        <Menu theme="dark" mode="inline" items={items} />
       </Sider>
     </Layout>
   );
