@@ -100,6 +100,7 @@ const Canvasbody = () => {
     canvas1.requestRenderAll();
   }
 
+
   return (
     <>
       <canvas

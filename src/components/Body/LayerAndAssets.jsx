@@ -107,6 +107,3 @@ const LayerAndAssets = () => {
 };
 
 export default LayerAndAssets;
-
-
-
