@@ -12,17 +12,7 @@ const FabricCanvas = () => {
     };
   }, []);
 
-  function addRectangle() {
-    var rect = new fabric.Rect({
-      top: 80,
-      left: 300,
-      fill: 'blue',
-      width: 100,
-      height: 100,
-    });
-    canvas.add(rect);
-    canvas.requestRenderAll();
-  }
+  
 
   // function addCircle() {
   //   var circ = new fabric.Circle({
@@ -85,9 +75,6 @@ const FabricCanvas = () => {
       <br />
       <br />
       {/* <HStack marginLeft={'50px'}> */}
-      <Button type="button" colorScheme="blue" onClick={addRectangle}>
-        Rectangle
-      </Button>
       {/* 
         <Button type="button" colorScheme="yellow" onClick={addCircle}>
           Circle
