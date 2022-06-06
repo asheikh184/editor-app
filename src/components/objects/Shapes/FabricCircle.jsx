@@ -1,11 +1,11 @@
 import React, { useContext } from 'react';
 import { fabric } from 'fabric';
-import ContextCanvas from '../../context/ContextCanvas';
+import ContextCanvas from '../../../context/ContextCanvas';
 import { Button } from '@chakra-ui/react';
 
-const FabricRectangle = () => {
+const FabricInputField = () => {
   const [canvas] = useContext(ContextCanvas);
-  function addRectangle() {
+  function addInputField() {
     var rect = new fabric.Rect({
       top: 80,
       left: 300,
@@ -21,7 +21,7 @@ const FabricRectangle = () => {
       <Button
         type="button"
         colorScheme="blue"
-        onClick={addRectangle}
+        onClick={addInputField}
         variant={'ghost'}
         _hover={{}}
         _focus={{}}
@@ -29,10 +29,10 @@ const FabricRectangle = () => {
         textColor={'white'}
         fontWeight={'light'}
       >
-        Markers
+        Add Circle
       </Button>
     </>
   );
 };
 
-export default FabricRectangle;
+export default FabricInputField;

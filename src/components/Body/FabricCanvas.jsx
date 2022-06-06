@@ -1,6 +1,5 @@
 import React, { useContext, useEffect, useLayoutEffect, useState } from 'react';
 import { fabric } from 'fabric';
-import { Button } from '@chakra-ui/react';
 import ContextCanvas from '../../context/ContextCanvas';
 
 const FabricCanvas = () => {
@@ -11,8 +10,6 @@ const FabricCanvas = () => {
       initCanvas(new fabric.Canvas('c'));
     };
   }, []);
-
-  
 
   // function addCircle() {
   //   var circ = new fabric.Circle({

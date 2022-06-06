@@ -10,13 +10,15 @@ import {
   BsCodeSlash,
   GrYoutube,
   CgGhostCharacter,
+  BiRectangle
 } from 'react-icons/all';
 import Icon from '@ant-design/icons';
 import FabricCanvas from './FabricCanvas';
-import FabricRectangle from '../objects/FabricRectangle';
+import FabricRectangle from '../objects/Shapes/FabricRectangle';
 import SubMenu from 'antd/lib/menu/SubMenu';
 import { Button, Stack } from '@chakra-ui/react';
 const { Sider } = Layout;
+
 function getItem(label, key, icon, children) {
   return {
     key,
@@ -56,7 +58,7 @@ const LayerAndAssets = () => {
             <Menu.Item key="1">
               <Icon component={SiIconify} />
               <Button variant={'ghost'} _hover={{}} _focus={{}} _active={{}}>
-                <FabricRectangle />{' '}
+                {' '}
               </Button>
             </Menu.Item>
           </SubMenu>
@@ -117,9 +119,9 @@ const LayerAndAssets = () => {
               </Button>
             </Menu.Item>
             <Menu.Item key="6">
-              <Icon component={SiIconify} />
+              <Icon component={BiRectangle} />
               <Button variant={'ghost'} _hover={{}} _focus={{}} _active={{}}>
-                Rectangle{' '}
+              <FabricRectangle/>
               </Button>
             </Menu.Item>
             <Menu.Item key="7">
