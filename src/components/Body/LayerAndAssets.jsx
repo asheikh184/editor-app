@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState } from 'react';
 import 'antd/dist/antd.css';
 import { Layout, Menu } from 'antd';
 import {
@@ -10,13 +10,17 @@ import {
   BsCodeSlash,
   GrYoutube,
   CgGhostCharacter,
-  BiRectangle
+  BiRectangle,
+  CgShapeCircle
 } from 'react-icons/all';
+
 import Icon from '@ant-design/icons';
 import FabricCanvas from './FabricCanvas';
 import FabricRectangle from '../objects/Shapes/FabricRectangle';
+import FabricTextBox from '../objects/Shapes/FabricTextBox';
+import FabricCircle from '../objects/Shapes/FabricCircle';
 import SubMenu from 'antd/lib/menu/SubMenu';
-import { Button, Stack } from '@chakra-ui/react';
+import { Button } from '@chakra-ui/react';
 const { Sider } = Layout;
 
 function getItem(label, key, icon, children) {
@@ -73,9 +77,9 @@ const LayerAndAssets = () => {
             }
           >
             <Menu.Item key="2">
-              <Icon component={SiIconify} />
+              <Icon component={BiText} />
               <Button variant={'ghost'} _hover={{}} _focus={{}} _active={{}}>
-                Input Field{' '}
+                <FabricTextBox />
               </Button>
             </Menu.Item>
           </SubMenu>
@@ -113,15 +117,15 @@ const LayerAndAssets = () => {
             }
           >
             <Menu.Item key="5">
-              <Icon component={SiIconify} />
+              <Icon component={CgShapeCircle} />
               <Button variant={'ghost'} _hover={{}} _focus={{}} _active={{}}>
-                Circle{' '}
+                <FabricCircle />
               </Button>
             </Menu.Item>
             <Menu.Item key="6">
               <Icon component={BiRectangle} />
               <Button variant={'ghost'} _hover={{}} _focus={{}} _active={{}}>
-              <FabricRectangle/>
+                <FabricRectangle />
               </Button>
             </Menu.Item>
             <Menu.Item key="7">

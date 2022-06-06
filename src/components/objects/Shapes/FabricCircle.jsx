@@ -3,17 +3,16 @@ import { fabric } from 'fabric';
 import ContextCanvas from '../../../context/ContextCanvas';
 import { Button } from '@chakra-ui/react';
 
-const FabricInputField = () => {
+const FabricCircle = () => {
   const [canvas] = useContext(ContextCanvas);
-  function addInputField() {
-    var rect = new fabric.Rect({
-      top: 80,
-      left: 300,
-      fill: 'blue',
-      width: 100,
-      height: 100,
+  function addCircle() {
+    var circ = new fabric.Circle({
+      left: 50,
+      top: 50,
+      fill: 'yellow',
+      radius: 60,
     });
-    canvas.add(rect);
+    canvas.add(circ);
     canvas.requestRenderAll();
   }
   return (
@@ -21,7 +20,7 @@ const FabricInputField = () => {
       <Button
         type="button"
         colorScheme="blue"
-        onClick={addInputField}
+        onClick={addCircle}
         variant={'ghost'}
         _hover={{}}
         _focus={{}}
@@ -35,4 +34,4 @@ const FabricInputField = () => {
   );
 };
 
-export default FabricInputField;
+export default FabricCircle;
