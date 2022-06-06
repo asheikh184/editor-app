@@ -1,7 +1,6 @@
 import React, { useState, useRef } from 'react';
 import 'antd/dist/antd.css';
 import { Layout, Menu } from 'antd';
-import Canvasbody from './Canvasbody';
 import {
   SiIconify,
   BiText,
@@ -12,9 +11,8 @@ import {
   GrYoutube,
   CgGhostCharacter,
 } from 'react-icons/all';
-
+import FabricCanvas from './FabricCanvas';
 const { Sider } = Layout;
-
 function getItem(label, key, icon, children) {
   return {
     key,
@@ -81,7 +79,7 @@ const LayerAndAssets = () => {
         }}
         className="site-layout"
       >
-        <Canvasbody />
+        <FabricCanvas />
       </Layout>
       <Sider
         style={{
