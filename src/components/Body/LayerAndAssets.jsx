@@ -57,7 +57,7 @@ const LayerAndAssets = () => {
             <Menu.Item key="1">
               <Icon component={SiIconify} />
               <Button variant={'ghost'} _hover={{}} _focus={{}} _active={{}}>
-                <FabricRectangle />{' '}
+                <FabricRectangle />
               </Button>
             </Menu.Item>
           </SubMenu>
@@ -74,7 +74,7 @@ const LayerAndAssets = () => {
             <Menu.Item key="2">
               <Icon component={SiIconify} />
               <Button variant={'ghost'} _hover={{}} _focus={{}} _active={{}}>
-                Input Field{' '}
+                Input Field
               </Button>
             </Menu.Item>
           </SubMenu>
@@ -91,7 +91,7 @@ const LayerAndAssets = () => {
             <Menu.Item key="3">
               <Icon component={SiIconify} />
               <Button variant={'ghost'} _hover={{}} _focus={{}} _active={{}}>
-                Images{' '}
+                Images
               </Button>
             </Menu.Item>
             <Menu.Item key="4">
@@ -114,25 +114,25 @@ const LayerAndAssets = () => {
             <Menu.Item key="5">
               <Icon component={SiIconify} />
               <Button variant={'ghost'} _hover={{}} _focus={{}} _active={{}}>
-                Circle{' '}
+                Circle
               </Button>
             </Menu.Item>
             <Menu.Item key="6">
               <Icon component={BiRectangle} />
               <Button variant={'ghost'} _hover={{}} _focus={{}} _active={{}}>
-                Rectangle
+                <FabricRectangle />
               </Button>
             </Menu.Item>
             <Menu.Item key="7">
               <Icon component={SiIconify} />
               <Button variant={'ghost'} _hover={{}} _focus={{}} _active={{}}>
-                Triangle{' '}
+                Triangle
               </Button>
             </Menu.Item>
             <Menu.Item key="8">
               <Icon component={SiIconify} />
               <Button variant={'ghost'} _hover={{}} _focus={{}} _active={{}}>
-                Cube{' '}
+                Cube
               </Button>
             </Menu.Item>
           </SubMenu>

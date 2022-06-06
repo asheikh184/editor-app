@@ -28,6 +28,7 @@ const FabricRectangle = () => {
         _active={{}}
         textColor={'white'}
         fontWeight={'light'}
+        
       >
         Markers
       </Button>
