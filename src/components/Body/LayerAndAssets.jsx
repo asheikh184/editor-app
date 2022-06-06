@@ -10,6 +10,7 @@ import {
   BsCodeSlash,
   GrYoutube,
   CgGhostCharacter,
+  BiRectangle
 } from 'react-icons/all';
 import Icon from '@ant-design/icons';
 import FabricCanvas from './FabricCanvas';
@@ -117,9 +118,9 @@ const LayerAndAssets = () => {
               </Button>
             </Menu.Item>
             <Menu.Item key="6">
-              <Icon component={SiIconify} />
+              <Icon component={BiRectangle} />
               <Button variant={'ghost'} _hover={{}} _focus={{}} _active={{}}>
-                Rectangle{' '}
+                Rectangle
               </Button>
             </Menu.Item>
             <Menu.Item key="7">
