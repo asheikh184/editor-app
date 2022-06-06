@@ -10,13 +10,17 @@ import {
   BsCodeSlash,
   GrYoutube,
   CgGhostCharacter,
-  BiRectangle
+  BiRectangle,
+  CgShapeCircle,
+  AiOutlineDelete
 } from 'react-icons/all';
 import Icon from '@ant-design/icons';
 import FabricCanvas from './FabricCanvas';
 import SubMenu from 'antd/lib/menu/SubMenu';
-import { Button, Stack } from '@chakra-ui/react';
 import FabricRectangle from '../objects/Shapes/FabricRectangle';
+import FabricCircle from '../objects/Shapes/FabricCircle';
+import FabricTextBox from '../objects/Shapes/FabricTextBox';
+import SaveFile from '../objects/SaveFile';
 const { Sider } = Layout;
 function getItem(label, key, icon, children) {
   return {
@@ -42,7 +46,7 @@ const LayerAndAssets = () => {
         marginTop: '-0.5px',
       }}
     >
-      <Sider collapsible collapsed={collapsed} onCollapse={onCollapse}>
+      <Sider collapsible collapsed={collapsed} onCollapse={onCollapse} style={{ overflow: 'auto' }}>
         <div className="logo" />
         <Menu theme="dark" mode="inline">
           <SubMenu
@@ -56,9 +60,9 @@ const LayerAndAssets = () => {
           >
             <Menu.Item key="1">
               <Icon component={SiIconify} />
-              <Button variant={'ghost'} _hover={{}} _focus={{}} _active={{}}>
-
-              </Button>
+              <button variant={'ghost'} _hover={{}} _focus={{}} _active={{}}>
+                Markers
+              </button>
             </Menu.Item>
           </SubMenu>
 
@@ -72,10 +76,10 @@ const LayerAndAssets = () => {
             }
           >
             <Menu.Item key="2">
-              <Icon component={SiIconify} />
-              <Button variant={'ghost'} _hover={{}} _focus={{}} _active={{}}>
-                Input Field
-              </Button>
+              <Icon component={BiText} />
+              <button variant={'ghost'} _hover={{}} _focus={{}} _active={{}}>
+                <FabricTextBox />
+              </button>
             </Menu.Item>
           </SubMenu>
 
@@ -90,15 +94,15 @@ const LayerAndAssets = () => {
           >
             <Menu.Item key="3">
               <Icon component={SiIconify} />
-              <Button variant={'ghost'} _hover={{}} _focus={{}} _active={{}}>
+              <button variant={'ghost'} _hover={{}} _focus={{}} _active={{}}>
                 Images
-              </Button>
+              </button>
             </Menu.Item>
             <Menu.Item key="4">
               <Icon component={SiIconify} />
-              <Button variant={'ghost'} _hover={{}} _focus={{}} _active={{}}>
+              <button variant={'ghost'} _hover={{}} _focus={{}} _active={{}}>
                 Gifs
-              </Button>
+              </button>
             </Menu.Item>
           </SubMenu>
 
@@ -112,28 +116,28 @@ const LayerAndAssets = () => {
             }
           >
             <Menu.Item key="5">
-              <Icon component={SiIconify} />
-              <Button variant={'ghost'} _hover={{}} _focus={{}} _active={{}}>
-                Circle
-              </Button>
+              <button>
+                <Icon component={CgShapeCircle} />
+                <FabricCircle />
+              </button>
             </Menu.Item>
             <Menu.Item key="6">
               <Icon component={BiRectangle} />
-              <Button variant={'ghost'} _hover={{}} _focus={{}} _active={{}} paddingEnd={'0 !important'}>
-                <FabricRectangle/>
-              </Button>
+              <button color={'#40505F'}>
+                <FabricRectangle />
+              </button>
             </Menu.Item>
             <Menu.Item key="7">
               <Icon component={SiIconify} />
-              <Button variant={'ghost'} _hover={{}} _focus={{}} _active={{}}>
+              <button variant={'ghost'} _hover={{}} _focus={{}} _active={{}}>
                 Triangle
-              </Button>
+              </button>
             </Menu.Item>
             <Menu.Item key="8">
               <Icon component={SiIconify} />
-              <Button variant={'ghost'} _hover={{}} _focus={{}} _active={{}}>
+              <button variant={'ghost'} _hover={{}} _focus={{}} _active={{}}>
                 Cube
-              </Button>
+              </button>
             </Menu.Item>
           </SubMenu>
 
@@ -148,27 +152,27 @@ const LayerAndAssets = () => {
           >
             <Menu.Item key="9">
               <Icon component={SiIconify} />
-              <Button variant={'ghost'} _hover={{}} _focus={{}} _active={{}}>
+              <button variant={'ghost'} _hover={{}} _focus={{}} _active={{}}>
                 Polygon
-              </Button>
+              </button>
             </Menu.Item>
             <Menu.Item key="10">
               <Icon component={SiIconify} />
-              <Button variant={'ghost'} _hover={{}} _focus={{}} _active={{}}>
+              <button variant={'ghost'} _hover={{}} _focus={{}} _active={{}}>
                 Line
-              </Button>
+              </button>
             </Menu.Item>
             <Menu.Item key="11">
               <Icon component={SiIconify} />
-              <Button variant={'ghost'} _hover={{}} _focus={{}} _active={{}}>
+              <button variant={'ghost'} _hover={{}} _focus={{}} _active={{}}>
                 Arrow
-              </Button>
+              </button>
             </Menu.Item>
             <Menu.Item key="12">
               <Icon component={SiIconify} />
-              <Button variant={'ghost'} _hover={{}} _focus={{}} _active={{}}>
+              <button variant={'ghost'} _hover={{}} _focus={{}} _active={{}}>
                 Pen
-              </Button>
+              </button>
             </Menu.Item>
           </SubMenu>
           <SubMenu
@@ -182,21 +186,21 @@ const LayerAndAssets = () => {
           >
             <Menu.Item key="13">
               <Icon component={SiIconify} />
-              <Button variant={'ghost'} _hover={{}} _focus={{}} _active={{}}>
+              <button variant={'ghost'} _hover={{}} _focus={{}} _active={{}}>
                 Chart
-              </Button>
+              </button>
             </Menu.Item>
             <Menu.Item key="14">
               <Icon component={SiIconify} />
-              <Button variant={'ghost'} _hover={{}} _focus={{}} _active={{}}>
+              <button variant={'ghost'} _hover={{}} _focus={{}} _active={{}}>
                 Code
-              </Button>
+              </button>
             </Menu.Item>
             <Menu.Item key="15">
               <Icon component={SiIconify} />
-              <Button variant={'ghost'} _hover={{}} _focus={{}} _active={{}}>
+              <button variant={'ghost'} _hover={{}} _focus={{}} _active={{}}>
                 iFrame
-              </Button>
+              </button>
             </Menu.Item>
           </SubMenu>
 
@@ -211,12 +215,27 @@ const LayerAndAssets = () => {
           >
             <Menu.Item key="16">
               <Icon component={GrYoutube} />
-              <Button variant={'ghost'} _hover={{}} _focus={{}} _active={{}}>
+              <button variant={'ghost'} _hover={{}} _focus={{}} _active={{}}>
                 Video
-              </Button>
+              </button>
             </Menu.Item>
           </SubMenu>
-
+          <SubMenu
+            key="sub9"
+            title={
+              <span>
+                <Icon component={AiOutlineDelete} />
+                <span>Save</span>
+              </span>
+            }
+          >
+            <Menu.Item key="18">
+              <Icon component={AiOutlineDelete} />
+              <button variant={'ghost'} _hover={{}} _focus={{}} _active={{}}>
+                <SaveFile />
+              </button>
+            </Menu.Item>
+          </SubMenu>
           <SubMenu
             key="sub8"
             title={
@@ -228,11 +247,12 @@ const LayerAndAssets = () => {
           >
             <Menu.Item key="17">
               <Icon component={CgGhostCharacter} />
-              <Button variant={'ghost'} _hover={{}} _focus={{}} _active={{}}>
+              <button variant={'ghost'} _hover={{}} _focus={{}} _active={{}}>
                 SVG
-              </Button>
+              </button>
             </Menu.Item>
           </SubMenu>
+
         </Menu>
       </Sider>
       <Layout
@@ -243,7 +263,7 @@ const LayerAndAssets = () => {
       >
         <FabricCanvas />
       </Layout>
-      <Sider
+      {/* <Sider
         style={{
           overflowY: 'auto',
           right: 0,
@@ -255,7 +275,7 @@ const LayerAndAssets = () => {
       >
         <div className="logo" />
         <Menu theme="dark" mode="inline" />
-      </Sider>
+      </Sider> */}
     </Layout>
   );
 };

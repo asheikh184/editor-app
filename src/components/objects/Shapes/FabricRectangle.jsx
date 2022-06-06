@@ -20,15 +20,16 @@ const FabricRectangle = () => {
     <>
       <Button
         type="button"
-        colorScheme="blue"
+        color={'#40505F !important'}
         onClick={addRectangle}
         variant={'ghost'}
-        _hover={{}}
+
+        _hover={{ color: 'white' }}
         _focus={{}}
         _active={{}}
         textColor={'white'}
         fontWeight={'light'}
-        
+
       >
         Rectangle
       </Button>
