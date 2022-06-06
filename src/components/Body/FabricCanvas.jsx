@@ -1,12 +1,12 @@
 import React, { useContext, useEffect, useLayoutEffect, useState } from 'react';
 import { fabric } from 'fabric';
-import { Button, HStack, Input, VStack } from '@chakra-ui/react';
+import { Button } from '@chakra-ui/react';
 import ContextCanvas from '../../context/ContextCanvas';
 
 const FabricCanvas = () => {
   const [canvas, initCanvas] = useContext(ContextCanvas);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     return () => {
       initCanvas(new fabric.Canvas('c'));
     };
@@ -21,7 +21,7 @@ const FabricCanvas = () => {
       height: 100,
     });
     canvas.add(rect);
-    canvas.requestRenderAll()
+    canvas.requestRenderAll();
   }
 
   // function addCircle() {
