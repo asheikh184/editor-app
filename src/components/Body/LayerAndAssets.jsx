@@ -14,9 +14,9 @@ import {
 } from 'react-icons/all';
 import Icon from '@ant-design/icons';
 import FabricCanvas from './FabricCanvas';
-import FabricRectangle from '../objects/FabricRectangle';
 import SubMenu from 'antd/lib/menu/SubMenu';
 import { Button, Stack } from '@chakra-ui/react';
+import FabricRectangle from '../objects/Shapes/FabricRectangle';
 const { Sider } = Layout;
 function getItem(label, key, icon, children) {
   return {
@@ -57,7 +57,7 @@ const LayerAndAssets = () => {
             <Menu.Item key="1">
               <Icon component={SiIconify} />
               <Button variant={'ghost'} _hover={{}} _focus={{}} _active={{}}>
-                <FabricRectangle />
+
               </Button>
             </Menu.Item>
           </SubMenu>
@@ -119,8 +119,8 @@ const LayerAndAssets = () => {
             </Menu.Item>
             <Menu.Item key="6">
               <Icon component={BiRectangle} />
-              <Button variant={'ghost'} _hover={{}} _focus={{}} _active={{}}>
-                <FabricRectangle />
+              <Button variant={'ghost'} _hover={{}} _focus={{}} _active={{}} paddingEnd={'0 !important'}>
+                <FabricRectangle/>
               </Button>
             </Menu.Item>
             <Menu.Item key="7">

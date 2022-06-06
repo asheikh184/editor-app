@@ -1,19 +1,18 @@
 import React, { useContext } from 'react';
 import { fabric } from 'fabric';
-import ContextCanvas from '../../context/ContextCanvas';
+import ContextCanvas from '../../../context/ContextCanvas';
 import { Button } from '@chakra-ui/react';
 
-const FabricRectangle = () => {
+const FabricCircle = () => {
   const [canvas] = useContext(ContextCanvas);
-  function addRectangle() {
-    var rect = new fabric.Rect({
-      top: 80,
-      left: 300,
-      fill: 'blue',
-      width: 100,
-      height: 100,
+  function addCircle() {
+    var circ = new fabric.Circle({
+      left: 50,
+      top: 50,
+      fill: 'yellow',
+      radius: 60,
     });
-    canvas.add(rect);
+    canvas.add(circ);
     canvas.requestRenderAll();
   }
   return (
@@ -21,19 +20,18 @@ const FabricRectangle = () => {
       <Button
         type="button"
         colorScheme="blue"
-        onClick={addRectangle}
+        onClick={addCircle}
         variant={'ghost'}
         _hover={{}}
         _focus={{}}
         _active={{}}
         textColor={'white'}
         fontWeight={'light'}
-        
       >
-        Markers
+        Add Circle
       </Button>
     </>
   );
 };
 
-export default FabricRectangle;
+export default FabricCircle;
