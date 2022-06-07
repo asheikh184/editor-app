@@ -1,7 +1,10 @@
 import React, { useContext, useEffect, useLayoutEffect, useState } from 'react';
 import { fabric } from 'fabric';
 import ContextCanvas from '../../context/ContextCanvas';
+// import Fonts from '../../assests/fonts/Fonts'
 
+
+// const fonts = Fonts.getFonts()
 const FabricCanvas = () => {
   const [canvas, initCanvas] = useContext(ContextCanvas);
 
@@ -11,48 +14,15 @@ const FabricCanvas = () => {
     };
   }, []);
 
-  // function addCircle() {
-  //   var circ = new fabric.Circle({
-  //     left: 50,
-  //     top: 50,
-  //     fill: 'yellow',
-  //     radius: 60,
-  //   });
-  //   canvas1.add(circ);
-  //   canvas1.requestRenderAll();
-  // }
 
-  // function addTextBox() {
-  //   const textbox = new fabric.Textbox('Click on the Rectangle to move it.', {
-  //     fontSize: 20,
-  //     left: 50,
-  //     top: 100,
-  //     width: 200,
-  //     fill: 'black',
-  //     color: 'white',
-  //   });
-  //   canvas1.add(textbox);
-  //   canvas1.requestRenderAll();
-  // }
+  const change = (e) => {
 
-  // function addImage(event) {
-  //   if (event.target.files && event.target.files[0]) {
-  //     var img = event.target.files[0];
-  //     setImage(URL.createObjectURL(img));
-  //   }
-  // }
-
-  // function submitImage() {
-  //   var imgInstance = new fabric.Image(imagee, {
-  //     angle: 0,
-  //     padding: 10,
-  //     cornersize: 10,
-  //     height: 110,
-  //     width: 110,
-  //   });
-  //   canvas1.add(imgInstance);
-  //   canvas1.requestRenderAll();
-  // }
+    const value = e.target.value
+    if (value !== 'Times New Roman') {
+      canvas.getActiveObject().set("fontFamily", value);
+      canvas.requestRenderAll();
+    }
+  }
 
   // function deleteObj() {
   //   canvas1.getActiveObjects().forEach(obj => {
@@ -60,6 +30,8 @@ const FabricCanvas = () => {
   //   });
   //   canvas1.discardActiveObject().renderAll();
   // }
+
+
   return (
     <>
       <canvas
@@ -71,6 +43,32 @@ const FabricCanvas = () => {
 
       <br />
       <br />
+
+
+      <select onChange={change}>
+        <option value="">Select Font</option>
+        <option value="Times New Roman">Times New Roman</option>
+        <option value="Helvetica">Helvetica</option>
+        <option value="Arial">Arial</option>
+        <option value="Courier New">Courier New</option>
+        <option value="Verdana">Verdana</option>
+        <option value="Georgia">Georgia</option>
+        <option value="Palatino">Palatino</option>
+        <option value="Garamond">Garamond</option>
+        <option value="Comic Sans MS">Comic Sans MS</option>
+      </select>
+
+      {/* <select>
+        {
+          fonts.map(font => {
+            return (
+              <option value={font.name} >
+                {font.name}
+              </option>
+            )
+
+          })}
+      </select> */}
       {/* <HStack marginLeft={'50px'}> */}
       {/* 
         <Button type="button" colorScheme="yellow" onClick={addCircle}>
@@ -91,7 +89,6 @@ const FabricCanvas = () => {
         </Button>
       </HStack> */}
     </>
-  );
-};
-
+  )
+}
 export default FabricCanvas;

@@ -22,6 +22,7 @@
     "react-icons": "^3.0.0",
     "react-scripts": "5.0.1",
     "styled-components": "^5.3.5",
+    "use-font-face-observer": "^1.2.1",
     "web-vitals": "^0.2.2",
     "yarn": "^1.22.18"
   },
