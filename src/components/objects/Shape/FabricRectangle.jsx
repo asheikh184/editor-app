@@ -12,6 +12,9 @@ const FabricRectangle = () => {
       fill: 'blue',
       width: 100,
       height: 100,
+      stroke: 'green',
+      cornerColor: 'blue',
+     
     });
     canvas.add(rect);
     canvas.requestRenderAll();
