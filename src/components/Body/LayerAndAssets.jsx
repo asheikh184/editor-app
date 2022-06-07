@@ -12,14 +12,18 @@ import {
   CgGhostCharacter,
   BiRectangle,
   CgShapeCircle,
+  BsTriangle,
+  FaRegCircle,
 } from 'react-icons/all';
 
 import Icon from '@ant-design/icons';
 import FabricCanvas from './FabricCanvas';
-import FabricRectangle from '../objects/Shapes/FabricRectangle';
-import FabricTextBox from '../objects/Shapes/FabricTextBox';
-import FabricCircle from '../objects/Shapes/FabricCircle';
+import FabricRectangle from '../objects/Shape/FabricRectangle';
+import FabricTextBox from '../objects/Shape/FabricTextBox';
+import FabricCircle from '../objects/Shape/FabricCircle';
+import FabricTriangle from '../objects/Shape/FabricTriangle';
 import SubMenu from 'antd/lib/menu/SubMenu';
+import Image from '../objects/Shape/Image';
 const { Sider } = Layout;
 
 function getItem(label, key, icon, children) {
@@ -95,7 +99,7 @@ const LayerAndAssets = () => {
             <Menu.Item key="3">
               <Icon component={SiIconify} />
               <button variant={'ghost'} _hover={{}} _focus={{}} _active={{}}>
-                Images{' '}
+                <Image />
               </button>
             </Menu.Item>
             <Menu.Item key="4">
@@ -117,7 +121,7 @@ const LayerAndAssets = () => {
           >
             <Menu.Item key="5">
               <button>
-                <Icon component={CgShapeCircle} />
+                <Icon component={FaRegCircle} />
                 <FabricCircle />
               </button>
             </Menu.Item>
@@ -128,15 +132,9 @@ const LayerAndAssets = () => {
               </button>
             </Menu.Item>
             <Menu.Item key="7">
-              <Icon component={SiIconify} />
+              <Icon component={BsTriangle} />
               <button variant={'ghost'} _hover={{}} _focus={{}} _active={{}}>
-                Triangle{' '}
-              </button>
-            </Menu.Item>
-            <Menu.Item key="8">
-              <Icon component={SiIconify} />
-              <button variant={'ghost'} _hover={{}} _focus={{}} _active={{}}>
-                Cube{' '}
+                <FabricTriangle />
               </button>
             </Menu.Item>
           </SubMenu>

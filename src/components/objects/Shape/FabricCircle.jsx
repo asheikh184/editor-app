@@ -11,6 +11,10 @@ const FabricCircle = () => {
       top: 50,
       fill: 'yellow',
       radius: 60,
+      stroke: 'green',
+      strokeWidth: 3,
+      cornerColor: 'blue',
+     
     });
     canvas.add(circ);
     canvas.requestRenderAll();
