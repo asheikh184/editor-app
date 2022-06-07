@@ -1,10 +1,14 @@
-import { Button, IconButton, Img, Stack } from '@chakra-ui/react';
+import { Button, Icon, IconButton, Img, Stack } from '@chakra-ui/react';
 import React from 'react';
 import logo from '../../assests/images/logo.png';
 import { ImDownload2, ImUpload2 } from 'react-icons/im';
 import { BsCardImage } from 'react-icons/bs';
+import SaveFile from '../objects/SaveFile'
 
 const Header = () => {
+  const SaveHandler = () => {
+    <SaveFile />
+  }
   return (
     <>
       {/* Header */}
@@ -45,27 +49,11 @@ const Header = () => {
         justify={'flex-end'}
         pr={'2'}
       >
-        <IconButton
-          _hover={{ color: 'white' }}
-          _focus={{}}
-          _active={{}}
+        <button
           variant={'ghost'}
-          icon={<ImDownload2 />}
-        />
-        <IconButton
-          _hover={{ color: 'white' }}
-          _focus={{}}
-          _active={{}}
-          variant={'ghost'}
-          icon={<ImUpload2 />}
-        />
-        <IconButton
-          _hover={{ color: 'white' }}
-          _focus={{}}
-          _active={{}}
-          variant={'ghost'}
-          icon={<BsCardImage />}
-        />
+        >
+          <SaveFile />
+        </button>
       </Stack>
     </>
   );
