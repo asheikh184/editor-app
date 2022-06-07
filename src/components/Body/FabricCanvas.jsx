@@ -16,7 +16,6 @@ const FabricCanvas = () => {
 
 
   const change = (e) => {
-
     const value = e.target.value
     if (value !== 'Times New Roman') {
       canvas.getActiveObject().set("fontFamily", value);
@@ -37,9 +36,9 @@ const FabricCanvas = () => {
       <canvas
         style={{ border: 'solid 1px #555' }}
         id="c"
-        
-        width={window.innerWidth}
-        height={window.innerHeight}
+
+        width={1000}
+        height={300}
       />
 
       <br />
@@ -48,15 +47,12 @@ const FabricCanvas = () => {
 
       <select onChange={change}>
         <option value="">Select Font</option>
-        <option value="Times New Roman">Times New Roman</option>
         <option value="Helvetica">Helvetica</option>
-        <option value="Arial">Arial</option>
         <option value="Courier New">Courier New</option>
         <option value="Verdana">Verdana</option>
         <option value="Georgia">Georgia</option>
-        <option value="Palatino">Palatino</option>
-        <option value="Garamond">Garamond</option>
         <option value="Comic Sans MS">Comic Sans MS</option>
+        <option value="monospace" >Monospace</option>
       </select>
 
       {/* <select>
