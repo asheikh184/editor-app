@@ -1,31 +1,36 @@
 import React, { useContext } from 'react';
 import { fabric } from 'fabric';
-import { Button } from '@chakra-ui/react';
+import { Button, IconButton } from '@chakra-ui/react';
 import ContextCanvas from '../../context/ContextCanvas';
+import { ImDownload2 } from 'react-icons/im';
 
 const SaveFile = () => {
     const [canvas] = useContext(ContextCanvas);
-    function convertToImagen() {
-        canvas.renderAll();
-        window.open(canvas.toDataURL('png'));
+    const saveCanvasImage = (option = { name: 'New Image', format: 'png', quality: 1 }) => {
+        const dataUrl = canvas.toDataURL(option);
+
+        const anchorEl = document.createElement('a');
+        anchorEl.href = dataUrl;
+        anchorEl.download = `${option.name}.png`;
+        // works with firefox
+        // document.body.appendChild(anchorEl); 
+        // anchorEl.click();
+        // anchorEl.remove();
+        return anchorEl.click()
+
     }
     return (
         <>
-            <Button
+            <IconButton
                 type="button"
-                color={'#40505F !important'}
-                onClick={(convertToImagen())}
-                variant={'ghost'}
-
+                onClick={() => saveCanvasImage()}
                 _hover={{ color: 'white' }}
                 _focus={{}}
                 _active={{}}
-                textColor={'white'}
-                fontWeight={'light'}
+                variant={'ghost'}
+                icon={<ImDownload2/>}
 
-            >
-                Save
-            </Button>
+            />
         </>
     );
 };

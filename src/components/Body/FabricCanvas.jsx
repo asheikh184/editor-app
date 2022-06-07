@@ -65,8 +65,9 @@ const FabricCanvas = () => {
       <canvas
         style={{ border: 'solid 1px #555' }}
         id="c"
-        width="1300px"
-        height="400px"
+        
+        width={window.innerWidth}
+        height={window.innerHeight}
       />
 
       <br />

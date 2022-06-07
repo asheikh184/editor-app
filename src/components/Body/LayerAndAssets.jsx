@@ -14,6 +14,7 @@ import {
   CgShapeCircle,
   BsTriangle,
   FaRegCircle,
+  AiOutlineDelete,
 } from 'react-icons/all';
 import Icon from '@ant-design/icons';
 import FabricCanvas from './FabricCanvas';
@@ -23,6 +24,7 @@ import FabricCircle from '../objects/Shape/FabricCircle';
 import FabricTriangle from '../objects/Shape/FabricTriangle';
 import SubMenu from 'antd/lib/menu/SubMenu';
 import Image from '../objects/Shape/Image';
+import SaveFile from '../objects/SaveFile';
 const { Sider } = Layout;
 function getItem(label, key, icon, children) {
   return {
@@ -96,9 +98,7 @@ const LayerAndAssets = () => {
           >
             <Menu.Item key="3">
               <Icon component={SiIconify} />
-              <button variant={'ghost'} _hover={{}} _focus={{}} _active={{}}>
-                <Image />
-              </button>
+              <Image />
             </Menu.Item>
             <Menu.Item key="4">
               <Icon component={SiIconify} />
@@ -217,20 +217,6 @@ const LayerAndAssets = () => {
             </Menu.Item>
           </SubMenu>
           <SubMenu
-            key="sub9"
-            title={
-              <span>
-                <Icon />
-                <span>Save</span>
-              </span>
-            }
-          >
-            <Menu.Item key="18">
-              <Icon component={AiOutlineDelete} />
-              <SaveFile />
-            </Menu.Item>
-          </SubMenu>
-          <SubMenu
             key="sub8"
             title={
               <span>
@@ -315,7 +301,7 @@ const LayerAndAssets = () => {
             <Menu.Item key="3">
               <Icon component={SiIconify} />
               <button variant={'ghost'} _hover={{}} _focus={{}} _active={{}}>
-                Images
+                <Image />
               </button>
             </Menu.Item>
             <Menu.Item key="4">
@@ -438,20 +424,6 @@ const LayerAndAssets = () => {
               <button variant={'ghost'} _hover={{}} _focus={{}} _active={{}}>
                 Video
               </button>
-            </Menu.Item>
-          </SubMenu>
-          <SubMenu
-            key="sub9"
-            title={
-              <span>
-                <Icon component={AiOutlineDelete} />
-                <span>Save</span>
-              </span>
-            }
-          >
-            <Menu.Item key="18">
-              <Icon component={AiOutlineDelete} />
-              <SaveFile />
             </Menu.Item>
           </SubMenu>
           <SubMenu
