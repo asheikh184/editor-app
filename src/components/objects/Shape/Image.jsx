@@ -21,7 +21,7 @@ const Image = () => {
     reader.readAsDataURL(file);
   };
 
-  return <input type="file" placeholder='UploadImage' onChange={name1} />;
+  return <button type="file" placeholder='UploadImage' onChange={name1} />;
 };
 
 export default Image;

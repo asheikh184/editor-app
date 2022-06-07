@@ -220,15 +220,15 @@ const LayerAndAssets = () => {
             key="sub9"
             title={
               <span>
-                <Icon component={AiOutlineDelete} />
+                <Icon />
                 <span>Save</span>
               </span>
             }
           >
             <Menu.Item key="18">
-              <Icon component={AiOutlineDelete} />
+              <Icon />
               <button variant={'ghost'} _hover={{}} _focus={{}} _active={{}}>
-                <SaveFile />
+            
               </button>
             </Menu.Item>
           </SubMenu>
