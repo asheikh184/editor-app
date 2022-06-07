@@ -5,18 +5,16 @@ import ContextCanvas from '../../context/ContextCanvas';
 
 const SaveFile = () => {
     const [canvas] = useContext(ContextCanvas);
-    function SaveCanvas() {
-        const image = canvas.toDataURL({
-            format: 'png',
-            
-        })
+    function convertToImagen() {
+        canvas.renderAll();
+        window.open(canvas.toDataURL('png'));
     }
     return (
         <>
             <Button
                 type="button"
                 color={'#40505F !important'}
-                onClick={SaveCanvas}
+                onClick={(convertToImagen())}
                 variant={'ghost'}
 
                 _hover={{ color: 'white' }}
