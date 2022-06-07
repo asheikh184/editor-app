@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import 'antd/dist/antd.css';
 import { Layout, Menu } from 'antd';
 import {
@@ -15,7 +15,6 @@ import {
   BsTriangle,
   FaRegCircle,
 } from 'react-icons/all';
-
 import Icon from '@ant-design/icons';
 import FabricCanvas from './FabricCanvas';
 import FabricRectangle from '../objects/Shape/FabricRectangle';
@@ -25,7 +24,6 @@ import FabricTriangle from '../objects/Shape/FabricTriangle';
 import SubMenu from 'antd/lib/menu/SubMenu';
 import Image from '../objects/Shape/Image';
 const { Sider } = Layout;
-
 function getItem(label, key, icon, children) {
   return {
     key,
@@ -50,7 +48,7 @@ const LayerAndAssets = () => {
         marginTop: '-0.5px',
       }}
     >
-      <Sider collapsible collapsed={collapsed} onCollapse={onCollapse}>
+      <Sider collapsible collapsed={collapsed} onCollapse={onCollapse} style={{ overflow: 'auto' }}>
         <div className="logo" />
         <Menu theme="dark" mode="inline">
           <SubMenu
@@ -65,7 +63,7 @@ const LayerAndAssets = () => {
             <Menu.Item key="1">
               <Icon component={SiIconify} />
               <button variant={'ghost'} _hover={{}} _focus={{}} _active={{}}>
-                {' '}
+                Markers
               </button>
             </Menu.Item>
           </SubMenu>
@@ -127,7 +125,7 @@ const LayerAndAssets = () => {
             </Menu.Item>
             <Menu.Item key="6">
               <Icon component={BiRectangle} />
-              <button variant={'ghost'} _hover={{}} _focus={{}} _active={{}}>
+              <button color={'#40505F'}>
                 <FabricRectangle />
               </button>
             </Menu.Item>
@@ -218,7 +216,22 @@ const LayerAndAssets = () => {
               </button>
             </Menu.Item>
           </SubMenu>
-
+          <SubMenu
+            key="sub9"
+            title={
+              <span>
+                <Icon component={AiOutlineDelete} />
+                <span>Save</span>
+              </span>
+            }
+          >
+            <Menu.Item key="18">
+              <Icon component={AiOutlineDelete} />
+              <button variant={'ghost'} _hover={{}} _focus={{}} _active={{}}>
+                <SaveFile />
+              </button>
+            </Menu.Item>
+          </SubMenu>
           <SubMenu
             key="sub8"
             title={
@@ -235,6 +248,7 @@ const LayerAndAssets = () => {
               </button>
             </Menu.Item>
           </SubMenu>
+
         </Menu>
       </Sider>
       <Layout
@@ -245,7 +259,7 @@ const LayerAndAssets = () => {
       >
         <FabricCanvas />
       </Layout>
-      <Sider
+      {/* <Sider
         style={{
           overflowY: 'auto',
           right: 0,
@@ -257,7 +271,7 @@ const LayerAndAssets = () => {
       >
         <div className="logo" />
         <Menu theme="dark" mode="inline" />
-      </Sider>
+      </Sider> */}
     </Layout>
   );
 };
