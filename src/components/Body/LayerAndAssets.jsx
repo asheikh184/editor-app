@@ -13,8 +13,7 @@ import {
   BiRectangle,
   CgShapeCircle,
   BsTriangle,
-  FaRegCircle,
-  AiOutlineDelete,
+  FaRegCircle
 } from 'react-icons/all';
 import Icon from '@ant-design/icons';
 import FabricCanvas from './FabricCanvas';
@@ -24,7 +23,6 @@ import FabricCircle from '../objects/Shape/FabricCircle';
 import FabricTriangle from '../objects/Shape/FabricTriangle';
 import SubMenu from 'antd/lib/menu/SubMenu';
 import Image from '../objects/Shape/Image';
-import SaveFile from '../objects/SaveFile';
 const { Sider } = Layout;
 function getItem(label, key, icon, children) {
   return {

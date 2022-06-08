@@ -9,7 +9,7 @@ export function CanvasProvider({ children }) {
   const initCanvas = c => {
     setCanvas(c);
     c.renderAll();
-  };
+  }
 
   return (
     <ContextCanvas.Provider value={[canvas, initCanvas]}>
