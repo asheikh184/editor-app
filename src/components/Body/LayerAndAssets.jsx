@@ -16,6 +16,7 @@ import {
   FaRegCircle
 } from 'react-icons/all';
 import Icon from '@ant-design/icons';
+import Pen from "../objects/drawings/Pen"
 import FabricCanvas from './FabricCanvas';
 import FabricRectangle from '../objects/Shape/FabricRectangle';
 import FabricTextBox from '../objects/Shape/FabricTextBox';
@@ -171,7 +172,7 @@ const LayerAndAssets = () => {
             <Menu.Item key="12">
               <Icon component={SiIconify} />
               <button variant={'ghost'} _hover={{}} _focus={{}} _active={{}}>
-                Pen
+                <Pen />
               </button>
             </Menu.Item>
           </SubMenu>
@@ -261,8 +262,150 @@ const LayerAndAssets = () => {
         <Menu theme="dark" mode="inline">
 
           <SubMenu
+<<<<<<< HEAD
             theme="dark"
             key="sub01"
+=======
+            key="sub2"
+            title={
+              <span>
+                <Icon component={BiText} />
+                <span>Text</span>
+              </span>
+            }
+          >
+            <Menu.Item key="2">
+              <Icon component={BiText} />
+              <button variant={'ghost'} _hover={{}} _focus={{}} _active={{}}>
+                <FabricTextBox />
+              </button>
+            </Menu.Item>
+          </SubMenu>
+
+          <SubMenu
+            key="sub3"
+            title={
+              <span>
+                <Icon component={BsCardImage} />
+                <span>Image</span>
+              </span>
+            }
+          >
+            <Menu.Item key="3">
+              <Icon component={SiIconify} />
+              <button variant={'ghost'} _hover={{}} _focus={{}} _active={{}}>
+                <Image />
+              </button>
+            </Menu.Item>
+            <Menu.Item key="4">
+              <Icon component={SiIconify} />
+              <button variant={'ghost'} _hover={{}} _focus={{}} _active={{}}>
+                Gifs
+              </button>
+            </Menu.Item>
+          </SubMenu>
+
+          <SubMenu
+            key="sub4"
+            title={
+              <span>
+                <Icon component={FaShapes} />
+                <span>Shapes</span>
+              </span>
+            }
+          >
+            <Menu.Item key="5">
+              <button>
+                <Icon component={CgShapeCircle} />
+                <FabricCircle />
+              </button>
+            </Menu.Item>
+            <Menu.Item key="6">
+              <Icon component={BiRectangle} />
+              <button color={'#40505F'}>
+                <FabricRectangle />
+              </button>
+            </Menu.Item>
+            <Menu.Item key="7">
+              <Icon component={SiIconify} />
+              <button variant={'ghost'} _hover={{}} _focus={{}} _active={{}}>
+                Triangle
+              </button>
+            </Menu.Item>
+            <Menu.Item key="8">
+              <Icon component={SiIconify} />
+              <button variant={'ghost'} _hover={{}} _focus={{}} _active={{}}>
+                Cube
+              </button>
+            </Menu.Item>
+          </SubMenu>
+
+          <SubMenu
+            key="sub5"
+            title={
+              <span>
+                <Icon component={FaDrawPolygon} />
+                <span>Drawing</span>
+              </span>
+            }
+          >
+            <Menu.Item key="9">
+              <Icon component={SiIconify} />
+              <button variant={'ghost'} _hover={{}} _focus={{}} _active={{}}>
+                Polygon
+              </button>
+            </Menu.Item>
+            <Menu.Item key="10">
+              <Icon component={SiIconify} />
+              <button variant={'ghost'} _hover={{}} _focus={{}} _active={{}}>
+                Line
+              </button>
+            </Menu.Item>
+            <Menu.Item key="11">
+              <Icon component={SiIconify} />
+              <button variant={'ghost'} _hover={{}} _focus={{}} _active={{}}>
+                Arrow
+              </button>
+            </Menu.Item>
+            <Menu.Item key="12">
+              <Icon component={SiIconify} />
+              <button variant={'ghost'} _hover={{}} _focus={{}} _active={{}}>
+                <Pen />
+              </button>
+            </Menu.Item>
+          </SubMenu>
+          <SubMenu
+            key="sub6"
+            title={
+              <span>
+                <Icon component={BsCodeSlash} />
+                <span>Element</span>
+              </span>
+            }
+          >
+            <Menu.Item key="13">
+              <Icon component={SiIconify} />
+              <button variant={'ghost'} _hover={{}} _focus={{}} _active={{}}>
+                Chart
+              </button>
+            </Menu.Item>
+            <Menu.Item key="14">
+              <Icon component={SiIconify} />
+              <button variant={'ghost'} _hover={{}} _focus={{}} _active={{}}>
+                Code
+              </button>
+            </Menu.Item>
+            <Menu.Item key="15">
+              <Icon component={SiIconify} />
+              <button variant={'ghost'} _hover={{}} _focus={{}} _active={{}}>
+                iFrame
+              </button>
+            </Menu.Item>
+          </SubMenu>
+
+          <SubMenu
+            key="sub7"
+>>>>>>> 9f5c5c08825dd118e9cdb069878f52327ac4e48c
             title={
               <span>
                 <Icon component={GrYoutube} />

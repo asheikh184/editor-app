@@ -3,17 +3,16 @@ import { fabric } from 'fabric';
 import ContextCanvas from '../../context/ContextCanvas';
 
 
-
-
 const FabricCanvas = () => {
   const [canvas, initCanvas] = useContext(ContextCanvas);
+
 
   useLayoutEffect(() => {
     return () => {
       initCanvas(new fabric.Canvas('c'));
+
     };
   }, []);
-
 
 
 
