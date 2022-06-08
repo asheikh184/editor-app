@@ -5,15 +5,19 @@ import ContextCanvas from '../../context/ContextCanvas';
 
 
 // const fonts = Fonts.getFonts()
+
 const FabricCanvas = () => {
   const [canvas, initCanvas] = useContext(ContextCanvas);
+
 
   useLayoutEffect(() => {
     return () => {
       initCanvas(new fabric.Canvas('c'));
+
     };
   }, []);
 
+ 
 
   const change = (e) => {
     const value = e.target.value
@@ -22,6 +26,9 @@ const FabricCanvas = () => {
       canvas.requestRenderAll();
     }
   }
+
+
+
 
   // function deleteObj() {
   //   canvas1.getActiveObjects().forEach(obj => {
@@ -55,10 +62,7 @@ const FabricCanvas = () => {
         <option value="monospace" >Monospace</option>
       </select>
 
-      <button>
-
-        
-      </button>
+      
       {/* <select>
         {
           fonts.map(font => {

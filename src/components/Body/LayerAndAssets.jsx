@@ -16,6 +16,7 @@ import {
   FaRegCircle
 } from 'react-icons/all';
 import Icon from '@ant-design/icons';
+import Pen from "../objects/drawings/Pen"
 import FabricCanvas from './FabricCanvas';
 import FabricRectangle from '../objects/Shape/FabricRectangle';
 import FabricTextBox from '../objects/Shape/FabricTextBox';
@@ -165,7 +166,7 @@ const LayerAndAssets = () => {
             <Menu.Item key="12">
               <Icon component={SiIconify} />
               <button variant={'ghost'} _hover={{}} _focus={{}} _active={{}}>
-                Pen
+                <Pen />
               </button>
             </Menu.Item>
           </SubMenu>
@@ -375,7 +376,7 @@ const LayerAndAssets = () => {
             <Menu.Item key="12">
               <Icon component={SiIconify} />
               <button variant={'ghost'} _hover={{}} _focus={{}} _active={{}}>
-                Pen
+                <Pen />
               </button>
             </Menu.Item>
           </SubMenu>
