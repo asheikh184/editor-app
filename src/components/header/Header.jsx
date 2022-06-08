@@ -1,14 +1,24 @@
 import { Button, Icon, IconButton, Img, Stack } from '@chakra-ui/react';
-import React from 'react';
 import logo from '../../assests/images/logo.png';
-import { ImDownload2, ImUpload2 } from 'react-icons/im';
-import { BsCardImage } from 'react-icons/bs';
 import SaveFile from '../objects/SaveFile'
+import { AiFillDelete } from 'react-icons/all'
+import ContextCanvas from '../../context/ContextCanvas';
+import { useContext } from 'react';
+
 
 const Header = () => {
-  const SaveHandler = () => {
-    <SaveFile />
+
+  const [canvas] = useContext(ContextCanvas)
+
+  const deleteObject = () => {
+
+    canvas.getActiveObjects().forEach(obj => {
+      canvas.remove(obj);
+    });
+    canvas.discardActiveObject().renderAll();
   }
+
+
   return (
     <>
       {/* Header */}
@@ -49,6 +59,9 @@ const Header = () => {
         justify={'flex-end'}
         pr={'2'}
       >
+
+        <IconButton onClick={deleteObject} variant={'ghost'} icon={<AiFillDelete />} />
+
         <button
           variant={'ghost'}
         >
@@ -56,7 +69,7 @@ const Header = () => {
         </button>
       </Stack>
     </>
-  );
-};
+  )
+}
 
 export default Header;

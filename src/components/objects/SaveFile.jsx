@@ -8,14 +8,9 @@ const SaveFile = () => {
     const [canvas] = useContext(ContextCanvas);
     const saveCanvasImage = (option = { name: 'New Image', format: 'png', quality: 1 }) => {
         const dataUrl = canvas.toDataURL(option);
-
         const anchorEl = document.createElement('a');
         anchorEl.href = dataUrl;
         anchorEl.download = `${option.name}.png`;
-        // works with firefox
-        // document.body.appendChild(anchorEl); 
-        // anchorEl.click();
-        // anchorEl.remove();
         return anchorEl.click()
 
     }
@@ -28,7 +23,7 @@ const SaveFile = () => {
                 _focus={{}}
                 _active={{}}
                 variant={'ghost'}
-                icon={<ImDownload2/>}
+                icon={<ImDownload2 />}
 
             />
         </>
