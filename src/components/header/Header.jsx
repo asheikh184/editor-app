@@ -3,11 +3,10 @@ import logo from '../../assests/images/logo.png';
 import SaveFile from '../objects/SaveFile'
 import { AiFillDelete } from 'react-icons/all'
 import ContextCanvas from '../../context/ContextCanvas';
-import { useContext } from 'react';
+import { useContext, useEffect } from 'react';
 
 
 const Header = () => {
-
   const [canvas] = useContext(ContextCanvas)
 
   const deleteObject = () => {
