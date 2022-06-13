@@ -1,4 +1,5 @@
 import React, { useContext } from 'react'
+import { Select } from '@chakra-ui/react'
 import ContextCanvas from '../../context/ContextCanvas'
 
 const ChangeFonts = () => {
@@ -18,15 +19,15 @@ const ChangeFonts = () => {
 
     return (
         <>
-            <select onChange={change}>
-                <option value="">Select Font</option>
-                <option value="Helvetica">Helvetica</option>
-                <option value="Courier New">Courier New</option>
-                <option value="Verdana">Verdana</option>
-                <option value="Georgia">Georgia</option>
-                <option value="Comic Sans MS">Comic Sans MS</option>
-                <option value="monospace" >Monospace</option>
-            </select>
+            <Select onChange={change} px={'2'}>
+                <option style={{ backgroundColor: 'white', color: 'black' }} value="">Select Font</option>
+                <option style={{ backgroundColor: 'white', color: 'black' }} value="Helvetica">Helvetica</option>
+                <option style={{ backgroundColor: 'white', color: 'black' }} value="Courier New">Courier New</option>
+                <option style={{ backgroundColor: 'white', color: 'black' }} value="Verdana">Verdana</option>
+                <option style={{ backgroundColor: 'white', color: 'black' }} value="Georgia">Georgia</option>
+                <option style={{ backgroundColor: 'white', color: 'black' }} value="Comic Sans MS">Comic Sans MS</option>
+                <option style={{ backgroundColor: 'white', color: 'black' }} value="monospace" >Monospace</option>
+            </Select>
 
 
 

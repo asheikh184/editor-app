@@ -1,4 +1,4 @@
-import React, { useContext, useLayoutEffect } from 'react';
+import React, { useContext, useEffect, useLayoutEffect } from 'react';
 import { fabric } from 'fabric';
 import ContextCanvas from '../../context/ContextCanvas';
 
@@ -8,12 +8,11 @@ const FabricCanvas = () => {
 
 
   useLayoutEffect(() => {
+
     return () => {
       initCanvas(new fabric.Canvas('c'));
-
     };
   }, []);
-
 
 
   return (

@@ -9,12 +9,12 @@ const FabricCircle = () => {
     var circ = new fabric.Circle({
       left: 50,
       top: 50,
-      fill: 'yellow',
+      fill: '',
       radius: 60,
-      stroke: 'green',
+      stroke: 'green',                                                          
       strokeWidth: 3,
-      cornerColor: 'blue',
-     
+      cornerColor: 'blue'
+
     });
     canvas.add(circ);
     canvas.requestRenderAll();

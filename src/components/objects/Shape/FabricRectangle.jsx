@@ -9,11 +9,12 @@ const FabricRectangle = () => {
     var rect = new fabric.Rect({
       top: 80,
       left: 300,
-      fill: 'blue',
+      fill: '',
+      stroke: 'green',
+      strokeWidth: 3,
       width: 100,
       height: 100,
-      stroke: 'green',
-      cornerColor: 'blue',
+      cornerColor: 'blue'
 
     });
     canvas.add(rect);

@@ -13,6 +13,7 @@ const Image = () => {
       fabric.Image.fromURL(data, function (img) {
         let scale = 300 / img.width;
         var oImg = img.set({ scaleX: scale, scaleY: scale }).scale(0.9);
+        oImg.shadowColor = 'rgba(0,0,0,0)';
         canvas.add(oImg).renderAll();
         // var a = canvas.setActiveObject(oImg);
         // var dataURL = canvas.toDataURL({ format: 'png', quality: 0.8 });

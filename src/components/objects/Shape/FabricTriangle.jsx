@@ -10,8 +10,9 @@ const FabricTriangle = () => {
       width: 150,
       height: 100,
       stroke: 'green',
+      fill: '',
       strokeWidth: 3,
-      cornerColor: 'blue',
+      cornerColor: 'blue'
     });
     canvas.add(triangle);
     canvas.requestRenderAll();

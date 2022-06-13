@@ -3,7 +3,13 @@ import logo from '../../assests/images/logo.png';
 import SaveFile from '../objects/SaveFile'
 import { AiFillDelete } from 'react-icons/all'
 import ContextCanvas from '../../context/ContextCanvas';
-import { useContext, useEffect } from 'react';
+import { useContext } from 'react';
+import { fabric } from 'fabric';
+import {
+  FaAngleDoubleUp,
+  FaAngleDoubleDown,
+  FaRegClone
+} from 'react-icons/all'
 
 
 const Header = () => {
@@ -18,6 +24,41 @@ const Header = () => {
   }
 
 
+  const bringToTop = () => {
+    var canvasTop = canvas;
+    var activeObj = canvasTop.getActiveObject();
+    activeObj &&
+      canvasTop.bringToFront(activeObj).discardActiveObject(activeObj).renderAll();
+  }
+
+  const sendToBack = () => {
+    var canvasBack = canvas;
+    var activeObj = canvasBack.getActiveObject();
+    activeObj &&
+      canvasBack.sendToBack(activeObj).discardActiveObject(activeObj).renderAll();
+
+
+  }
+
+
+  const cloneMultipleObject = () => {
+
+    var activeObjects = canvas.getActiveObjects();
+
+    if (activeObjects) {
+      activeObjects.forEach(function (object) {
+
+        object.clone(function (clone) {
+          canvas.add(clone.set({
+            left: object.left + 100,
+            top: object.top + 200
+          }));
+        })
+
+      });
+
+    }
+  }
   return (
     <>
       {/* Header */}
@@ -58,9 +99,10 @@ const Header = () => {
         justify={'flex-end'}
         pr={'2'}
       >
-
+        <IconButton onClick={cloneMultipleObject} variant={'ghost'} icon={<FaRegClone />} />
+        <IconButton onClick={bringToTop} variant={'ghost'} icon={< FaAngleDoubleUp />} />
+        <IconButton onClick={sendToBack} variant={'ghost'} icon={< FaAngleDoubleDown />} />
         <IconButton onClick={deleteObject} variant={'ghost'} icon={<AiFillDelete />} />
-
         <button
           variant={'ghost'}
         >

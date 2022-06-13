@@ -14,7 +14,7 @@ const FabricTextBox = () => {
       fill: 'black',
       color: 'white',
       cornerColor: 'blue',
-    
+
     });
     canvas.add(textbox);
     canvas.requestRenderAll();
