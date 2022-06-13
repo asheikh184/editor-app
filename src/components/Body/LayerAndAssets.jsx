@@ -1,4 +1,4 @@
-import React, { useState, useRef, useContext } from 'react';
+import React, { useState } from 'react';
 import 'antd/dist/antd.css';
 import { Layout, Menu } from 'antd';
 import {
@@ -26,8 +26,7 @@ import SubMenu from 'antd/lib/menu/SubMenu';
 import Image from '../objects/Shape/Image';
 import ColorPicker from '../ui/ColorPicker';
 import ChangeFonts from '../ui/ChangeFonts';
-
-
+import Polygon from '../objects/drawings/Polygon';
 const { Sider } = Layout;
 function getItem(label, key, icon, children) {
   return {
@@ -262,10 +261,6 @@ const LayerAndAssets = () => {
         <Menu theme="dark" mode="inline">
 
           <SubMenu
-<<<<<<< HEAD
-            theme="dark"
-            key="sub01"
-=======
             key="sub2"
             title={
               <span>
@@ -405,7 +400,6 @@ const LayerAndAssets = () => {
 
           <SubMenu
             key="sub7"
->>>>>>> 9f5c5c08825dd118e9cdb069878f52327ac4e48c
             title={
               <span>
                 <Icon component={GrYoutube} />

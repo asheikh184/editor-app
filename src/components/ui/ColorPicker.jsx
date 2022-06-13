@@ -6,7 +6,7 @@ import ContextCanvas from '../../context/ContextCanvas'
 const ColorPicker = ({ hex, hsl, hsv }) => {
     const [canvas] = useContext(ContextCanvas)
     var { Saturation } = require('react-color/lib/components/common');
-    const [color, setColor] = useState('#00bcd4');
+    const [color, setColor] = useState();
     const styles = {
         saturation: {
             width: 220,
@@ -18,11 +18,12 @@ const ColorPicker = ({ hex, hsl, hsv }) => {
 
     const colorPicker = (updatedColor) => {
         setColor(updatedColor.hex)
-        canvas.getActiveObject().set("fill", color);
+        canvas.getActiveObject().set("fill", updatedColor.hex);
         canvas.renderAll();
 
 
     }
+
     return (
         <Stack spacing={4} pt={'2'}>
             <div style={styles.saturation}>

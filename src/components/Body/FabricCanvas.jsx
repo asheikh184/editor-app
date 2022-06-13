@@ -1,6 +1,7 @@
 import React, { useContext, useLayoutEffect } from 'react';
 import { fabric } from 'fabric';
 import ContextCanvas from '../../context/ContextCanvas';
+import PolygonComp from '../objects/drawings/Polygon';
 
 
 const FabricCanvas = () => {
@@ -20,9 +21,11 @@ const FabricCanvas = () => {
     <>
       <canvas
         id="c"
-        width={window.innerWidth}
-        height={window.innerHeight}
+        width={1000}
+        height={300}
+        style={{border: '1px solid black'}}
       />
+      <PolygonComp/>
     </>
   )
 }
