@@ -51,36 +51,13 @@ const Header = () => {
               <ModalCloseButton />
               <ModalBody>
                 <VStack align={'center'} justify={'center'}>
-                  <Button w={'full'} bgColor={'#205375'} transition={'all .3s'} _after={{
-                    position: 'absolute',
-                    bottom: 0,
-                    left: 0,
-                    width: '100 %',
-                    height: '100 %',
-                    bgColor: '#001529',
-                    borderRadius: '10rem',
-                    zIndex: '-2',
-                  }}
-                    _before={{
-                      position: 'absolute',
-                      bottom: '0',
-                      left: '0',
-                      width: '0%',
-                      height: '100%',
-                      bgColor: '#121549',
-                      transition: 'all .35s',
-                      transform: 'translate(-50%, -50%)',
-                      borderRadius: '10rem',
-                      zIndex: '-1',
-                    }}
-                    _hover={{color:"#001529", _before:{width: '100%'} }}
-                  >
+                  <Button w={'full'} bgColor={'#205375'} _hover={{ color: "#001529" }}>
                     <Stack direction={'row'} align={'center'}>
                       <Text>Connect MetaMask</Text>
                       <Img src={meta} boxSize={'6'} />
                     </Stack>
                   </Button>
-                  <Button w={'full'} bgColor={'#205375'} >
+                  <Button w={'full'} bgColor={'#205375'} _hover={{ color: "#001529" }}>
                     <Stack direction={'row'} align={'center'}>
                       <Text>Connect Coinbase</Text>
                       <Img src={coinbase} boxSize={'6'} />
