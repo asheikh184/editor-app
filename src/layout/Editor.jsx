@@ -1,6 +1,6 @@
 import { Stack } from '@chakra-ui/react';
-import Header from '../components/header/Header';
 import LayerAndAssets from '../components/body/LayerAndAssets';
+import Header from '../components/header/Header';
 
 const Editor = () => {
   return (

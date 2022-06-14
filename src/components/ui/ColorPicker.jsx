@@ -12,6 +12,7 @@ const ColorPicker = () => {
         canvas.getActiveObject().set("fill", color.hex)
         canvas.renderAll()
     }
+
     return (
 
         <Stack spacing={4} py={'4'}>
